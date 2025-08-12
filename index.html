@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allvinly</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        :root {
+            --warna-partikel: #333333;
+            --warna-utama: #7460F8;
+            --warna-hover: #5B4BEB;
+            --teks-utama: #333333;
+            --teks-sekunder: #666666;
+            --latar-utama: #EEEEEE;
+            --latar-kotak: rgba(255, 255, 255, 0.8);
+            --latar-kotak-hover: rgba(240, 240, 240, 0.9);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --warna-partikel: #E0E0E0;
+                --warna-utama: #9C8FFF;
+                --warna-hover: #7B68EE;
+                --teks-utama: #E0E0E0;
+                --teks-sekunder: #A0A0A0;
+                --latar-utama: #121212;
+                --latar-kotak: rgba(30, 30, 30, 0.8);
+                --latar-kotak-hover: rgba(40, 40, 40, 0.9);
+            }
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--latar-utama);
+            font-family: "Rubik", sans-serif;
+            text-align: center;
+            color: var(--teks-utama);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        main {
+            margin: 20px auto;
+            width: 90%;
+            max-width: 600px;
+            z-index: 2;
+        }
+        
+        .profile-header {
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 12px;
+            margin-bottom: 0;
+        }
+        
+        .profile-bio {
+            font-size: 15px;
+            color: var(--teks-sekunder);
+            margin-top: 8px;
+        }
+
+        .social-media-links {
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+            margin-bottom: 32px;
+        }
+
+        .social-media-links a {
+            color: var(--warna-utama);
+            font-size: 25px;
+            transition: color 0.2s;
+        }
+        
+        .social-media-links a:hover {
+            color: var(--warna-hover);
+        }
+
+        .link-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .link-item {
+            display: block;
+            background-color: var(--latar-kotak);
+            padding: 15px 25px;
+            border-radius: 10px;
+            color: var(--teks-sekunder);
+            font-size: 15px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, background-color 0.2s;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        .link-item:hover {
+            transform: translateY(-2px);
+            background-color: var(--latar-kotak-hover);
+        }
+
+        .link-item:active,
+        .link-item:focus {
+            transform: none;
+            background-color: var(--latar-kotak);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            outline: none;
+        }
+        
+        .teks-rapat {
+            line-height: 0.4;
+        }
+
+        footer {
+            margin-top: auto;
+            margin-bottom: 56px;
+            color: var(--teks-sekunder);
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="particles-js"></div>
+    
+    <main>
+        <header class="profile-header">
+            <img class="profile-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFPxpXOgYR-z4OwrqvZrqYlg5vT7f2zzlEQ1gEKWJtnCeNU0T0Ne7hrnqU-N_nkCDN3uq4LzSToqQE48CXjRq8bNzOl3bCPTtdsmq6KapYn2Q7PtX6n-0WDq4LPthFCMBQT-7dWIp0dPb02vN_P2VTefxh2bisITioGdb5XEl25aHayUlOa4fDNqOkVfQ/s256/20250812_115655.jpg" alt="Foto Profil Alvin">
+            <h1 class="profile-name">Alvin</h1>
+            <p class="profile-bio">Menyukai hal baru karena bosen hidup.</p>
+        </header>
+     
+        <nav class="social-media-links">
+            <a href="https://instagram.com/allvinly" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://t.me/allvinly" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://youtube.com/@allvinly" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </nav>
+
+        <section class="link-list">
+            <a class="link-item" href="https://instagram.com/pcuwkofficial">KUNJUNGI PCUWK</a>
+            <a class="link-item" href="https://instagram.com/quwpuofficial">KUNJUNGI QUWPU</a>
+            <a class="link-item" href="https://sociabuzz.com/allvinly/tribe">BERI DUKUNGAN</a>
+        </section>
+    </main>
+     
+    <footer>
+        <p class="teks-rapat">Halaman ini dibuat dari hasil kolaborasi</p>
+        <p class="teks-rapat">dengan kecerdasan buatan.</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        function hexToRgb(hex) {
+            const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+            hex = hex.replace(shorthandRegex, (m, r, g, b) => r + r + g + g + b + b);
+            const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+            return result ? {
+                r: parseInt(result[1], 16),
+                g: parseInt(result[2], 16),
+                b: parseInt(result[3], 16)
+            } : null;
+        }
+        
+        function getParticleColor() {
+            const root = document.documentElement;
+            return getComputedStyle(root).getPropertyValue('--warna-partikel').trim();
+        }
+        
+        const particlesConfig = {
+            "particles": {
+                "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": getParticleColor() },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.5 },
+                "size": { "value": 3, "random": true },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": getParticleColor(),
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "out_mode": "out"
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": { "enable": false },
+                    "onclick": { "enable": false },
+                    "resize": true
+                }
+            },
+            "retina_detect": true
+        };
+        
+        particlesJS("particles-js", particlesConfig);
+
+        function updateParticleColor() {
+            const particleColor = getParticleColor();
+            const rgbColor = hexToRgb(particleColor);
+            
+            if (pJSDom && pJSDom[0]) {
+                pJSDom[0].pJS.particles.color.rgb = rgbColor;
+                pJSDom[0].pJS.particles.line_linked.color_rgb_line = rgbColor;
+                pJSDom[0].pJS.fn.particlesDraw();
+            }
+        }
+
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateParticleColor);
+    </script>
+</body>
+</html>
