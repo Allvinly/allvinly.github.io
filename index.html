@@ -18,6 +18,7 @@
             --latar-utama: #EEEEEE;
             --latar-kotak: rgba(255, 255, 255, 0.8);
             --latar-kotak-hover: rgba(240, 240, 240, 0.9);
+            --ikon-sosial: var(--teks-utama);
         }
 
         @media (prefers-color-scheme: dark) {
@@ -30,6 +31,7 @@
                 --latar-utama: #121212;
                 --latar-kotak: rgba(30, 30, 30, 0.8);
                 --latar-kotak-hover: rgba(40, 40, 40, 0.9);
+                --ikon-sosial: #FFFFFF;
             }
         }
 
@@ -79,6 +81,7 @@
             font-weight: bold;
             margin-top: 12px;
             margin-bottom: 0;
+            color: var(--ikon-sosial);
         }
         
         .profile-bio {
@@ -95,7 +98,7 @@
         }
 
         .social-media-links a {
-            color: var(--warna-utama);
+            color: var(--ikon-sosial);
             font-size: 25px;
             transition: color 0.2s;
         }
